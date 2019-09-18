@@ -9,22 +9,22 @@
     <relativePath>../../../</relativePath>
   </parent>
   <groupId>org.example.test_definitivo.job</groupId>
-  <artifactId>segundo_job</artifactId>
+  <artifactId>primer_job</artifactId>
   <version>0.1.0</version>
-  <name>PRUEBA_IMPORTACION_GIT segundo_job-0.1.0 (0.1,Job Designs)</name>
+  <name>TEST_DEFINITIVO primer_job-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
-    <talend.project.name.lowercase>prueba_importacion_git</talend.project.name.lowercase>
-    <talend.job.path>prueba_importacion_git/segundo_job_0_1</talend.job.path>
+    <talend.project.name.lowercase>test_definitivo</talend.project.name.lowercase>
+    <talend.job.path>test_definitivo/primer_job_0_1</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
-    <talend.project.name>PRUEBA_IMPORTACION_GIT</talend.project.name>
+    <talend.project.name>TEST_DEFINITIVO</talend.project.name>
     <talend.product.version>7.2.1.20190620_1446</talend.product.version>
-    <talend.job.finalName>segundo_job_0_1</talend.job.finalName>
+    <talend.job.finalName>primer_job_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.test_definitivo.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.test_definitivo.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -33,8 +33,8 @@
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>segundo_job</talend.job.name>
-    <talend.job.id>_JOBi8NoeEem-LKrXYY3fxQ</talend.job.id>
+    <talend.job.name>primer_job</talend.job.name>
+    <talend.job.id>_7VMx8NodEem-LKrXYY3fxQ</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.folder></talend.job.folder>
     <talend.job.framework></talend.job.framework>
@@ -42,101 +42,6 @@
     <talend.job.type>Standard</talend.job.type>
   </properties>
   <dependencies>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>barbecue-1.5-beta1</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>barcode4j-2.1</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-anim-1.7</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-awt-util</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-bridge</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-css</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-dom</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-ext-1.7</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-gvt-1.7</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-parser</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-script-1.7</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-svg-dom</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-svggen</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-util</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>batik-xml</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>commons-beanutils</groupId>
-      <artifactId>commons-beanutils</artifactId>
-      <version>1.8.3</version>
-    </dependency>
-    <dependency>
-      <groupId>commons-collections</groupId>
-      <artifactId>commons-collections</artifactId>
-      <version>3.2.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>commons-digester-2.1</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>commons-logging-1.1</artifactId>
-      <version>6.0.0</version>
-    </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>crypto-utils</artifactId>
@@ -148,44 +53,9 @@
       <version>1.6.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>iText-2.1.7.js2</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jasperreports-6.1.0</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jcommon-1.0.15</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jfreechart-1.0.12</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>poi-3.10.1</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talendcsv</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>xml-apis-ext-1.4</artifactId>
-      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.test_definitivo.code</groupId>

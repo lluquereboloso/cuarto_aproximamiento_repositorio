@@ -11,18 +11,18 @@
   <groupId>org.example.test_definitivo.job</groupId>
   <artifactId>segundo_job</artifactId>
   <version>0.1.0</version>
-  <name>PRUEBA_IMPORTACION_GIT segundo_job-0.1.0 (0.1,Job Designs)</name>
+  <name>TEST_DEFINITIVO segundo_job-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
-    <talend.project.name.lowercase>prueba_importacion_git</talend.project.name.lowercase>
-    <talend.job.path>prueba_importacion_git/segundo_job_0_1</talend.job.path>
+    <talend.project.name.lowercase>test_definitivo</talend.project.name.lowercase>
+    <talend.job.path>test_definitivo/segundo_job_0_1</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
-    <talend.project.name>PRUEBA_IMPORTACION_GIT</talend.project.name>
+    <talend.project.name>TEST_DEFINITIVO</talend.project.name>
     <talend.product.version>7.2.1.20190620_1446</talend.product.version>
     <talend.job.finalName>segundo_job_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.test_definitivo.pigudf</talend.pigudf.groupid>

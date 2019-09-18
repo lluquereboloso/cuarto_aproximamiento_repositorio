@@ -103,24 +103,5 @@
     <routinesParameter id="_ZtBW4NocEem-LKrXYY3fxQ" name="TalendString"/>
     <routinesParameter id="_ZtaYcNocEem-LKrXYY3fxQ" name="TalendStringUtil"/>
   </parameters>
-  <node componentName="tJasperOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJasperOutput_1" show="false"/>
-    <elementParameter field="FILE" name="JRXML_FILE" value="&quot;C:/Users/Stratebi/Desktop/Software/TOS_DI-20190620_1446-V7.2.1/TOS_DI-20190620_1446-V7.2.1/workspace/test.jrxml&quot;"/>
-    <elementParameter field="DIRECTORY" name="TEMP_FILE" value="&quot;C:/Users/Stratebi/Desktop/Software/TOS_DI-20190620_1446-V7.2.1/TOS_DI-20190620_1446-V7.2.1/workspace/&quot;"/>
-    <elementParameter field="DIRECTORY" name="DESTINATION" value="&quot;C:/Users/Stratebi/Desktop/Software/TOS_DI-20190620_1446-V7.2.1/TOS_DI-20190620_1446-V7.2.1/workspace/&quot;"/>
-    <elementParameter field="TEXT" name="FILE_NAME" value="&quot;out&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="REPORT_TYPE" value="html"/>
-    <elementParameter field="COMMAND" name="IREPORT" value="&quot;cmd /c \&quot;start /D \&quot;__IREPORT_PATH__\&quot; iReport\&quot;&quot;"/>
-    <elementParameter field="CHECK" name="SPECIFY_LOCALE" value="false"/>
-    <elementParameter field="OPENED_LIST" name="REPORT_LOCALE" value="US" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJasperOutput_1"/>
-  </node>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJasperOutput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
+  <note opaque="false" posX="576" posY="288" sizeHeight="64" sizeWidth="96" text="Prueba otro"/>
 </talendfile:ProcessType>
