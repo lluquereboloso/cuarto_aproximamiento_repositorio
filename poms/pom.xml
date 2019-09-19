@@ -13,6 +13,7 @@
     <module>jobs/process/primer_job_0.1</module>
     <module>jobs/process/segundo_job_0.1</module>
     <module>jobs/process/tercer_job_0.1</module>
+    <module>jobs/process/lectura_mysql_db_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST_DEFINITIVO</talend.project.name>

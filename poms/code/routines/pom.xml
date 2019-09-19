@@ -11,7 +11,7 @@
   <groupId>org.example.test_definitivo.code</groupId>
   <artifactId>routines</artifactId>
   <version>7.2.1</version>
-  <name>PRUEBA_IMPORTACION_GIT Routines</name>
+  <name>TEST_DEFINITIVO Routines</name>
   <properties>
     <talend.codes.package>routines</talend.codes.package>
   </properties>
