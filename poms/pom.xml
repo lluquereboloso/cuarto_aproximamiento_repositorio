@@ -6,7 +6,7 @@
   <artifactId>code.Master</artifactId>
   <version>7.2.1</version>
   <packaging>pom</packaging>
-  <name>TEST_DEFINITIVO Codes Master</name>
+  <name>PRUEBA_IMPORTACION_GIT Codes Master</name>
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
@@ -16,7 +16,7 @@
     <module>jobs/process/lectura_mysql_db_0.1</module>
   </modules>
   <properties>
-    <talend.project.name>TEST_DEFINITIVO</talend.project.name>
+    <talend.project.name>PRUEBA_IMPORTACION_GIT</talend.project.name>
     <encoding>UTF-8</encoding>
   </properties>
   <build>
