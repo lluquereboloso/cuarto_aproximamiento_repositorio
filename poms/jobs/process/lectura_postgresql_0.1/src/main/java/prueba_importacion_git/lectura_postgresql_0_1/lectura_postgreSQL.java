@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package prueba_importacion_git.lectura_mysql_db_0_1;
+package prueba_importacion_git.lectura_postgresql_0_1;
 
 import routines.Numeric;
 import routines.DataOperation;
@@ -44,14 +44,14 @@ import java.util.Comparator;
 @SuppressWarnings("unused")
 
 /**
- * Job: lectura_MySQL_DB Purpose: <br>
+ * Job: lectura_postgreSQL Purpose: <br>
  * Description: <br>
  * 
  * @author
  * @version 7.2.1.20190620_1446
  * @status
  */
-public class lectura_MySQL_DB implements TalendJob {
+public class lectura_postgreSQL implements TalendJob {
 
 	protected static void logIgnoredError(String message, Throwable cause) {
 		System.err.println(message);
@@ -129,7 +129,7 @@ public class lectura_MySQL_DB implements TalendJob {
 	}
 
 	private final String jobVersion = "0.1";
-	private final String jobName = "lectura_MySQL_DB";
+	private final String jobName = "lectura_postgreSQL";
 	private final String projectName = "PRUEBA_IMPORTACION_GIT";
 	public Integer errorCode = null;
 	private String currentComponent = "";
@@ -239,14 +239,14 @@ public class lectura_MySQL_DB implements TalendJob {
 				} else {
 					e.printStackTrace();
 					e.printStackTrace(errorMessagePS);
-					lectura_MySQL_DB.this.exception = e;
+					lectura_postgreSQL.this.exception = e;
 				}
 			}
 			if (!(e instanceof TalendException)) {
 				try {
 					for (java.lang.reflect.Method m : this.getClass().getEnclosingClass().getMethods()) {
 						if (m.getName().compareTo(currentComponent + "_error") == 0) {
-							m.invoke(lectura_MySQL_DB.this, new Object[] { e, currentComponent, globalMap });
+							m.invoke(lectura_postgreSQL.this, new Object[] { e, currentComponent, globalMap });
 							break;
 						}
 					}
@@ -393,25 +393,106 @@ public class lectura_MySQL_DB implements TalendJob {
 	}
 
 	public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
-		final static byte[] commonByteArrayLock_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB = new byte[0];
-		static byte[] commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB = new byte[0];
+		final static byte[] commonByteArrayLock_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL = new byte[0];
+		static byte[] commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL = new byte[0];
 
-		public long id;
+		public Integer customernumber;
 
-		public long getId() {
-			return this.id;
+		public Integer getCustomernumber() {
+			return this.customernumber;
 		}
 
-		public long product_id;
+		public String customername;
 
-		public long getProduct_id() {
-			return this.product_id;
+		public String getCustomername() {
+			return this.customername;
 		}
 
-		public String brand;
+		public String contactlastname;
 
-		public String getBrand() {
-			return this.brand;
+		public String getContactlastname() {
+			return this.contactlastname;
+		}
+
+		public String contactfirstname;
+
+		public String getContactfirstname() {
+			return this.contactfirstname;
+		}
+
+		public String phone;
+
+		public String getPhone() {
+			return this.phone;
+		}
+
+		public String addressline1;
+
+		public String getAddressline1() {
+			return this.addressline1;
+		}
+
+		public String addressline2;
+
+		public String getAddressline2() {
+			return this.addressline2;
+		}
+
+		public String city;
+
+		public String getCity() {
+			return this.city;
+		}
+
+		public String state;
+
+		public String getState() {
+			return this.state;
+		}
+
+		public String postalcode;
+
+		public String getPostalcode() {
+			return this.postalcode;
+		}
+
+		public String country;
+
+		public String getCountry() {
+			return this.country;
+		}
+
+		public Integer salesrepemployeenumber;
+
+		public Integer getSalesrepemployeenumber() {
+			return this.salesrepemployeenumber;
+		}
+
+		public Long creditlimit;
+
+		public Long getCreditlimit() {
+			return this.creditlimit;
+		}
+
+		private Integer readInteger(ObjectInputStream dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException {
+			if (intNum == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeInt(intNum);
+			}
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -421,15 +502,16 @@ public class lectura_MySQL_DB implements TalendJob {
 			if (length == -1) {
 				strReturn = null;
 			} else {
-				if (length > commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB.length) {
-					if (length < 1024 && commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB.length == 0) {
-						commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB = new byte[1024];
+				if (length > commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL.length) {
+					if (length < 1024 && commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL.length == 0) {
+						commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL = new byte[1024];
 					} else {
-						commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB = new byte[2 * length];
+						commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL = new byte[2 * length];
 					}
 				}
-				dis.readFully(commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB, 0, length);
-				strReturn = new String(commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB, 0, length, utf8Charset);
+				dis.readFully(commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL, 0, length);
+				strReturn = new String(commonByteArray_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL, 0, length,
+						utf8Charset);
 			}
 			return strReturn;
 		}
@@ -446,17 +528,42 @@ public class lectura_MySQL_DB implements TalendJob {
 
 		public void readData(ObjectInputStream dis) {
 
-			synchronized (commonByteArrayLock_PRUEBA_IMPORTACION_GIT_lectura_MySQL_DB) {
+			synchronized (commonByteArrayLock_PRUEBA_IMPORTACION_GIT_lectura_postgreSQL) {
 
 				try {
 
 					int length = 0;
 
-					this.id = dis.readLong();
+					this.customernumber = readInteger(dis);
 
-					this.product_id = dis.readLong();
+					this.customername = readString(dis);
 
-					this.brand = readString(dis);
+					this.contactlastname = readString(dis);
+
+					this.contactfirstname = readString(dis);
+
+					this.phone = readString(dis);
+
+					this.addressline1 = readString(dis);
+
+					this.addressline2 = readString(dis);
+
+					this.city = readString(dis);
+
+					this.state = readString(dis);
+
+					this.postalcode = readString(dis);
+
+					this.country = readString(dis);
+
+					this.salesrepemployeenumber = readInteger(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.creditlimit = null;
+					} else {
+						this.creditlimit = dis.readLong();
+					}
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -470,17 +577,62 @@ public class lectura_MySQL_DB implements TalendJob {
 		public void writeData(ObjectOutputStream dos) {
 			try {
 
-				// long
+				// Integer
 
-				dos.writeLong(this.id);
-
-				// long
-
-				dos.writeLong(this.product_id);
+				writeInteger(this.customernumber, dos);
 
 				// String
 
-				writeString(this.brand, dos);
+				writeString(this.customername, dos);
+
+				// String
+
+				writeString(this.contactlastname, dos);
+
+				// String
+
+				writeString(this.contactfirstname, dos);
+
+				// String
+
+				writeString(this.phone, dos);
+
+				// String
+
+				writeString(this.addressline1, dos);
+
+				// String
+
+				writeString(this.addressline2, dos);
+
+				// String
+
+				writeString(this.city, dos);
+
+				// String
+
+				writeString(this.state, dos);
+
+				// String
+
+				writeString(this.postalcode, dos);
+
+				// String
+
+				writeString(this.country, dos);
+
+				// Integer
+
+				writeInteger(this.salesrepemployeenumber, dos);
+
+				// Long
+
+				if (this.creditlimit == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeLong(this.creditlimit);
+				}
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -493,9 +645,19 @@ public class lectura_MySQL_DB implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("id=" + String.valueOf(id));
-			sb.append(",product_id=" + String.valueOf(product_id));
-			sb.append(",brand=" + brand);
+			sb.append("customernumber=" + String.valueOf(customernumber));
+			sb.append(",customername=" + customername);
+			sb.append(",contactlastname=" + contactlastname);
+			sb.append(",contactfirstname=" + contactfirstname);
+			sb.append(",phone=" + phone);
+			sb.append(",addressline1=" + addressline1);
+			sb.append(",addressline2=" + addressline2);
+			sb.append(",city=" + city);
+			sb.append(",state=" + state);
+			sb.append(",postalcode=" + postalcode);
+			sb.append(",country=" + country);
+			sb.append(",salesrepemployeenumber=" + String.valueOf(salesrepemployeenumber));
+			sb.append(",creditlimit=" + String.valueOf(creditlimit));
 			sb.append("]");
 
 			return sb.toString();
@@ -591,11 +753,11 @@ public class lectura_MySQL_DB implements TalendJob {
 
 					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
 
-					int[] colLengths = new int[3];
+					int[] colLengths = new int[13];
 
 					public void addRow(String[] row) {
 
-						for (int i = 0; i < 3; i++) {
+						for (int i = 0; i < 13; i++) {
 							if (row[i] != null) {
 								colLengths[i] = Math.max(colLengths[i], row[i].length());
 							}
@@ -622,11 +784,11 @@ public class lectura_MySQL_DB implements TalendJob {
 						// name
 						sb.append("|");
 						int k = 0;
-						for (k = 0; k < (totals + 2 - name.length()) / 2; k++) {
+						for (k = 0; k < (totals + 12 - name.length()) / 2; k++) {
 							sb.append(' ');
 						}
 						sb.append(name);
-						for (int i = 0; i < totals + 2 - name.length() - k; i++) {
+						for (int i = 0; i < totals + 12 - name.length() - k; i++) {
 							sb.append(' ');
 						}
 						sb.append("|\n");
@@ -650,6 +812,46 @@ public class lectura_MySQL_DB implements TalendJob {
 
 							sbformat.append("|%3$-");
 							sbformat.append(colLengths[2]);
+							sbformat.append("s");
+
+							sbformat.append("|%4$-");
+							sbformat.append(colLengths[3]);
+							sbformat.append("s");
+
+							sbformat.append("|%5$-");
+							sbformat.append(colLengths[4]);
+							sbformat.append("s");
+
+							sbformat.append("|%6$-");
+							sbformat.append(colLengths[5]);
+							sbformat.append("s");
+
+							sbformat.append("|%7$-");
+							sbformat.append(colLengths[6]);
+							sbformat.append("s");
+
+							sbformat.append("|%8$-");
+							sbformat.append(colLengths[7]);
+							sbformat.append("s");
+
+							sbformat.append("|%9$-");
+							sbformat.append(colLengths[8]);
+							sbformat.append("s");
+
+							sbformat.append("|%10$-");
+							sbformat.append(colLengths[9]);
+							sbformat.append("s");
+
+							sbformat.append("|%11$-");
+							sbformat.append(colLengths[10]);
+							sbformat.append("s");
+
+							sbformat.append("|%12$-");
+							sbformat.append(colLengths[11]);
+							sbformat.append("s");
+
+							sbformat.append("|%13$-");
+							sbformat.append(colLengths[12]);
 							sbformat.append("s");
 
 							sbformat.append("|\n");
@@ -679,9 +881,49 @@ public class lectura_MySQL_DB implements TalendJob {
 							sb.append(fillChars[2]);
 						}
 						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[2] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[3] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[4] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[5] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[6] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[7] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[8] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[9] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[10] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[11] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
 
 						// last column
-						for (int i = 0; i < colLengths[2] - fillChars[1].length() + 1; i++) {
+						for (int i = 0; i < colLengths[12] - fillChars[1].length() + 1; i++) {
 							sb.append(fillChars[2]);
 						}
 						sb.append(fillChars[1]);
@@ -697,7 +939,9 @@ public class lectura_MySQL_DB implements TalendJob {
 				}
 				Util_tLogRow_1 util_tLogRow_1 = new Util_tLogRow_1();
 				util_tLogRow_1.setTableName("tLogRow_1");
-				util_tLogRow_1.addRow(new String[] { "id", "product_id", "brand", });
+				util_tLogRow_1.addRow(new String[] { "customernumber", "customername", "contactlastname",
+						"contactfirstname", "phone", "addressline1", "addressline2", "city", "state", "postalcode",
+						"country", "salesrepemployeenumber", "creditlimit", });
 				StringBuilder strBuffer_tLogRow_1 = null;
 				int nb_line_tLogRow_1 = 0;
 ///////////////////////    			
@@ -717,16 +961,14 @@ public class lectura_MySQL_DB implements TalendJob {
 
 				int tos_count_tDBInput_1 = 0;
 
-				java.util.Calendar calendar_tDBInput_1 = java.util.Calendar.getInstance();
-				calendar_tDBInput_1.set(0, 0, 0, 0, 0, 0);
-				java.util.Date year0_tDBInput_1 = calendar_tDBInput_1.getTime();
 				int nb_line_tDBInput_1 = 0;
 				java.sql.Connection conn_tDBInput_1 = null;
 				conn_tDBInput_1 = (java.sql.Connection) globalMap.get("conn_tDBConnection_1");
 
 				java.sql.Statement stmt_tDBInput_1 = conn_tDBInput_1.createStatement();
 
-				String dbquery_tDBInput_1 = "SELECT id, product_id, brand\nFROM mysql.brands";
+				String dbquery_tDBInput_1 = "SELECT customernumber, customername, contactlastname, contactfirstname, phone, addressline1, addressline2, city, state,"
+						+ " postalcode, country, salesrepemployeenumber, creditlimit\nFROM public.customers";
 
 				globalMap.put("tDBInput_1_QUERY", dbquery_tDBInput_1);
 				java.sql.ResultSet rs_tDBInput_1 = null;
@@ -742,28 +984,91 @@ public class lectura_MySQL_DB implements TalendJob {
 						nb_line_tDBInput_1++;
 
 						if (colQtyInRs_tDBInput_1 < 1) {
-							row1.id = 0;
+							row1.customernumber = null;
 						} else {
 
-							row1.id = rs_tDBInput_1.getLong(1);
+							row1.customernumber = rs_tDBInput_1.getInt(1);
 							if (rs_tDBInput_1.wasNull()) {
-								throw new RuntimeException("Null value in non-Nullable column");
+								row1.customernumber = null;
 							}
 						}
 						if (colQtyInRs_tDBInput_1 < 2) {
-							row1.product_id = 0;
+							row1.customername = null;
 						} else {
 
-							row1.product_id = rs_tDBInput_1.getLong(2);
-							if (rs_tDBInput_1.wasNull()) {
-								throw new RuntimeException("Null value in non-Nullable column");
-							}
+							row1.customername = routines.system.JDBCUtil.getString(rs_tDBInput_1, 2, false);
 						}
 						if (colQtyInRs_tDBInput_1 < 3) {
-							row1.brand = null;
+							row1.contactlastname = null;
 						} else {
 
-							row1.brand = routines.system.JDBCUtil.getString(rs_tDBInput_1, 3, false);
+							row1.contactlastname = routines.system.JDBCUtil.getString(rs_tDBInput_1, 3, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 4) {
+							row1.contactfirstname = null;
+						} else {
+
+							row1.contactfirstname = routines.system.JDBCUtil.getString(rs_tDBInput_1, 4, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 5) {
+							row1.phone = null;
+						} else {
+
+							row1.phone = routines.system.JDBCUtil.getString(rs_tDBInput_1, 5, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 6) {
+							row1.addressline1 = null;
+						} else {
+
+							row1.addressline1 = routines.system.JDBCUtil.getString(rs_tDBInput_1, 6, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 7) {
+							row1.addressline2 = null;
+						} else {
+
+							row1.addressline2 = routines.system.JDBCUtil.getString(rs_tDBInput_1, 7, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 8) {
+							row1.city = null;
+						} else {
+
+							row1.city = routines.system.JDBCUtil.getString(rs_tDBInput_1, 8, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 9) {
+							row1.state = null;
+						} else {
+
+							row1.state = routines.system.JDBCUtil.getString(rs_tDBInput_1, 9, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 10) {
+							row1.postalcode = null;
+						} else {
+
+							row1.postalcode = routines.system.JDBCUtil.getString(rs_tDBInput_1, 10, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 11) {
+							row1.country = null;
+						} else {
+
+							row1.country = routines.system.JDBCUtil.getString(rs_tDBInput_1, 11, false);
+						}
+						if (colQtyInRs_tDBInput_1 < 12) {
+							row1.salesrepemployeenumber = null;
+						} else {
+
+							row1.salesrepemployeenumber = rs_tDBInput_1.getInt(12);
+							if (rs_tDBInput_1.wasNull()) {
+								row1.salesrepemployeenumber = null;
+							}
+						}
+						if (colQtyInRs_tDBInput_1 < 13) {
+							row1.creditlimit = null;
+						} else {
+
+							row1.creditlimit = rs_tDBInput_1.getLong(13);
+							if (rs_tDBInput_1.wasNull()) {
+								row1.creditlimit = null;
+							}
 						}
 
 						/**
@@ -807,14 +1112,70 @@ public class lectura_MySQL_DB implements TalendJob {
 
 ///////////////////////		
 
-						String[] row_tLogRow_1 = new String[3];
+						String[] row_tLogRow_1 = new String[13];
 
-						row_tLogRow_1[0] = String.valueOf(row1.id);
+						if (row1.customernumber != null) { //
+							row_tLogRow_1[0] = String.valueOf(row1.customernumber);
 
-						row_tLogRow_1[1] = String.valueOf(row1.product_id);
+						} //
 
-						if (row1.brand != null) { //
-							row_tLogRow_1[2] = String.valueOf(row1.brand);
+						if (row1.customername != null) { //
+							row_tLogRow_1[1] = String.valueOf(row1.customername);
+
+						} //
+
+						if (row1.contactlastname != null) { //
+							row_tLogRow_1[2] = String.valueOf(row1.contactlastname);
+
+						} //
+
+						if (row1.contactfirstname != null) { //
+							row_tLogRow_1[3] = String.valueOf(row1.contactfirstname);
+
+						} //
+
+						if (row1.phone != null) { //
+							row_tLogRow_1[4] = String.valueOf(row1.phone);
+
+						} //
+
+						if (row1.addressline1 != null) { //
+							row_tLogRow_1[5] = String.valueOf(row1.addressline1);
+
+						} //
+
+						if (row1.addressline2 != null) { //
+							row_tLogRow_1[6] = String.valueOf(row1.addressline2);
+
+						} //
+
+						if (row1.city != null) { //
+							row_tLogRow_1[7] = String.valueOf(row1.city);
+
+						} //
+
+						if (row1.state != null) { //
+							row_tLogRow_1[8] = String.valueOf(row1.state);
+
+						} //
+
+						if (row1.postalcode != null) { //
+							row_tLogRow_1[9] = String.valueOf(row1.postalcode);
+
+						} //
+
+						if (row1.country != null) { //
+							row_tLogRow_1[10] = String.valueOf(row1.country);
+
+						} //
+
+						if (row1.salesrepemployeenumber != null) { //
+							row_tLogRow_1[11] = String.valueOf(row1.salesrepemployeenumber);
+
+						} //
+
+						if (row1.creditlimit != null) { //
+							row_tLogRow_1[12] = String.valueOf(row1.creditlimit);
 
 						} //
 
@@ -877,7 +1238,6 @@ public class lectura_MySQL_DB implements TalendJob {
 						stmt_tDBInput_1.close();
 					}
 				}
-
 				globalMap.put("tDBInput_1_NB_LINE", nb_line_tDBInput_1);
 
 				ok_Hash.put("tDBInput_1", true);
@@ -1132,11 +1492,8 @@ public class lectura_MySQL_DB implements TalendJob {
 				currentComponent = "tDBClose_1";
 
 				java.sql.Connection conn_tDBClose_1 = (java.sql.Connection) globalMap.get("conn_tDBConnection_1");
-
 				if (conn_tDBClose_1 != null && !conn_tDBClose_1.isClosed()) {
-
 					conn_tDBClose_1.close();
-
 				}
 
 				tos_count_tDBClose_1++;
@@ -1364,25 +1721,36 @@ public class lectura_MySQL_DB implements TalendJob {
 
 				int tos_count_tDBConnection_1 = 0;
 
-				String properties_tDBConnection_1 = "noDatetimeStringSync=true";
-				if (properties_tDBConnection_1 == null || properties_tDBConnection_1.trim().length() == 0) {
-					properties_tDBConnection_1 += "rewriteBatchedStatements=true";
-				} else if (properties_tDBConnection_1 != null
-						&& !properties_tDBConnection_1.contains("rewriteBatchedStatements")) {
-					properties_tDBConnection_1 += "&rewriteBatchedStatements=true";
-				}
+				String dbProperties_tDBConnection_1 = "";
+				String url_tDBConnection_1 = "jdbc:postgresql://" + "localhost" + ":" + "5432" + "/" + "sampledata_etl";
 
-				String url_tDBConnection_1 = "jdbc:mysql://" + "localhost" + ":" + "3306" + "/" + "mysql" + "?"
-						+ properties_tDBConnection_1;
-				String dbUser_tDBConnection_1 = "root";
+				if (dbProperties_tDBConnection_1 != null && !"".equals(dbProperties_tDBConnection_1.trim())) {
+					url_tDBConnection_1 = url_tDBConnection_1 + "?" + dbProperties_tDBConnection_1;
+				}
+				String dbUser_tDBConnection_1 = "postgres";
 
 				final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil
-						.decryptPassword("ENC:[K8itoTytQBHHYCRTrKxyNw==]");
+						.decryptPassword("ENC:[Wc5JN7QOl+hOSS4VvmpEAQ==]");
 				String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 
 				java.sql.Connection conn_tDBConnection_1 = null;
 
-				String driverClass_tDBConnection_1 = "com.mysql.jdbc.Driver";
+				java.util.Enumeration<java.sql.Driver> drivers_tDBConnection_1 = java.sql.DriverManager.getDrivers();
+				java.util.Set<String> redShiftDriverNames_tDBConnection_1 = new java.util.HashSet<String>(
+						java.util.Arrays.asList("com.amazon.redshift.jdbc.Driver", "com.amazon.redshift.jdbc41.Driver",
+								"com.amazon.redshift.jdbc42.Driver"));
+				while (drivers_tDBConnection_1.hasMoreElements()) {
+					java.sql.Driver d_tDBConnection_1 = drivers_tDBConnection_1.nextElement();
+					if (redShiftDriverNames_tDBConnection_1.contains(d_tDBConnection_1.getClass().getName())) {
+						try {
+							java.sql.DriverManager.deregisterDriver(d_tDBConnection_1);
+							java.sql.DriverManager.registerDriver(d_tDBConnection_1);
+						} catch (java.lang.Exception e_tDBConnection_1) {
+							// do nothing
+						}
+					}
+				}
+				String driverClass_tDBConnection_1 = "org.postgresql.Driver";
 				java.lang.Class jdbcclazz_tDBConnection_1 = java.lang.Class.forName(driverClass_tDBConnection_1);
 
 				conn_tDBConnection_1 = java.sql.DriverManager.getConnection(url_tDBConnection_1, dbUser_tDBConnection_1,
@@ -1394,9 +1762,9 @@ public class lectura_MySQL_DB implements TalendJob {
 					conn_tDBConnection_1.setAutoCommit(false);
 				}
 
-				globalMap.put("conn_tDBConnection_1", conn_tDBConnection_1);
+				globalMap.put("schema_" + "tDBConnection_1", "");
 
-				globalMap.put("db_tDBConnection_1", "mysql");
+				globalMap.put("conn_" + "tDBConnection_1", conn_tDBConnection_1);
 
 				/**
 				 * [tDBConnection_1 begin ] stop
@@ -1658,9 +2026,9 @@ public class lectura_MySQL_DB implements TalendJob {
 	public String status = "";
 
 	public static void main(String[] args) {
-		final lectura_MySQL_DB lectura_MySQL_DBClass = new lectura_MySQL_DB();
+		final lectura_postgreSQL lectura_postgreSQLClass = new lectura_postgreSQL();
 
-		int exitCode = lectura_MySQL_DBClass.runJobInTOS(args);
+		int exitCode = lectura_postgreSQLClass.runJobInTOS(args);
 
 		System.exit(exitCode);
 	}
@@ -1726,10 +2094,10 @@ public class lectura_MySQL_DB implements TalendJob {
 		try {
 			// call job/subjob with an existing context, like: --context=production. if
 			// without this parameter, there will use the default context instead.
-			java.io.InputStream inContext = lectura_MySQL_DB.class.getClassLoader().getResourceAsStream(
-					"prueba_importacion_git/lectura_mysql_db_0_1/contexts/" + contextStr + ".properties");
+			java.io.InputStream inContext = lectura_postgreSQL.class.getClassLoader().getResourceAsStream(
+					"prueba_importacion_git/lectura_postgresql_0_1/contexts/" + contextStr + ".properties");
 			if (inContext == null) {
-				inContext = lectura_MySQL_DB.class.getClassLoader()
+				inContext = lectura_postgreSQL.class.getClassLoader()
 						.getResourceAsStream("config/contexts/" + contextStr + ".properties");
 			}
 			if (inContext != null) {
@@ -1858,7 +2226,7 @@ public class lectura_MySQL_DB implements TalendJob {
 		endUsedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 		if (false) {
 			System.out.println(
-					(endUsedMemory - startUsedMemory) + " bytes memory increase when running : lectura_MySQL_DB");
+					(endUsedMemory - startUsedMemory) + " bytes memory increase when running : lectura_postgreSQL");
 		}
 
 		if (execStat) {
@@ -2013,6 +2381,6 @@ public class lectura_MySQL_DB implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 58693 characters generated by Talend Open Studio for Data Integration on the
- * 20 de septiembre de 2019 9:01:30 CEST
+ * 71978 characters generated by Talend Open Studio for Data Integration on the
+ * 20 de septiembre de 2019 9:01:19 CEST
  ************************************************************************************************/

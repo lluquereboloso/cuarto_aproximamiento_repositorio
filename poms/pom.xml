@@ -14,6 +14,7 @@
     <module>jobs/process/segundo_job_0.1</module>
     <module>jobs/process/tercer_job_0.1</module>
     <module>jobs/process/lectura_mysql_db_0.1</module>
+	<module>jobs/process/lectura_postgresql_0.1</module>
   </modules>
   <properties>
     <talend.project.name>PRUEBA_IMPORTACION_GIT</talend.project.name>
